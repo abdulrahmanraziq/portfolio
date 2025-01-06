@@ -1,7 +1,7 @@
 import React from "react";
 import profileImage from "./assets/image/abdulrahmanraziq-profile.jpg";
 import Skills from "./Skills";
-import myResume from './assets/image/Abdul Raziq MERN STACK RESUME.pdf'
+import myResume from './assets/image/Abdul Rahman Raziq MERN STACK RESUME.pdf'
 function About() {
   return (
     <>

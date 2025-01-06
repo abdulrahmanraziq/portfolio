@@ -1,6 +1,6 @@
 import React from "react";
 import TypedText from "./TypedText";
-import myResume from './assets/image/Abdul Raziq MERN STACK RESUME.pdf'
+import myResume from './assets/image/Abdul Rahman Raziq MERN STACK RESUME.pdf'
 
 function MainContent() {
   return (
