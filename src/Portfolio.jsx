@@ -6,6 +6,8 @@ import frontEndDevelopment1 from "../src/assets/image/FrontEnddevelopment1.jpg";
 import frontEndDevelopment2 from "../src/assets/image/FrontEnddevelopment2.jpg";
 import mern1 from "../src/assets/image/mern1.jpg";
 import mern2 from "../src/assets/image/mern2.jpg";
+import mern3 from "../src/assets/image/mern3.jpg";
+import mern4 from "../src/assets/image/mern4.jpg";
 
 function Portfolio() {
   const [filter, setFilter] = useState("all");
@@ -52,6 +54,18 @@ function Portfolio() {
       category: "mern",
       title: "CRM Application",
       img: mern2,
+    },
+    {
+      id: 8,
+      category: "mern",
+      title: "Socializing",
+      img: mern3,
+    },
+    {
+      id: 9,
+      category: "mern",
+      title: "flight-app",
+      img: mern4,
     },
   ];
 
