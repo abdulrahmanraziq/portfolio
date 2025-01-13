@@ -18,54 +18,80 @@ function Portfolio() {
       category: "web-designing",
       title: "Cobra Sports",
       img: webdesigning1,
+      isGitHub: false,
+      isUrl: false,
     },
     {
       id: 2,
       category: "web-designing",
       title: "Civil Service India",
       img: webdesigning2,
+      isGitHub: false,
+      isUrl: false,
     },
     {
       id: 3,
       category: "web-designing",
       title: "FoodHub Carrers",
       img: webdesigning3,
+      isGitHub: false,
+      isUrl: false,
     },
     {
       id: 4,
       category: "front-end-devlopment",
       title: "Glencore",
       img: frontEndDevelopment1,
+      isGitHub: false,
+      isUrl: false,
     },
     {
       id: 5,
       category: "front-end-devlopment",
       title: "Strada Garnishment",
       img: frontEndDevelopment2,
+      isGitHub: false,
+      isUrl: false,
     },
     {
       id: 6,
       category: "mern",
       title: "News Apps",
       img: mern1,
+      isGitHub: true,
+      isUrl: true,
+      githubUrl: "https://github.com/abdulrahmanraziq/capstoneRealTimeNewsApp",
+      url: "https://6704f1c4db196bf95b4dc46e--thriving-squirrel-8d49f9.netlify.app/login",
     },
     {
       id: 7,
       category: "mern",
       title: "CRM Application",
       img: mern2,
+      isGitHub: true,
+      isUrl: true,
+      githubUrl: "https://github.com/abdulrahmanraziq/crm",
+      url: "https://thunderous-cucurucho-00682f.netlify.app/",
     },
     {
       id: 8,
       category: "mern",
       title: "Socializing",
       img: mern3,
+      isGitHub: true,
+      isUrl: true,
+      githubUrl: "https://github.com/abdulrahmanraziq/socializing-app",
+      url: "https://stellular-blancmange-9ba626.netlify.app/signin",
     },
     {
       id: 9,
       category: "mern",
       title: "flight-app",
       img: mern4,
+      isGitHub: true,
+      isUrl: true,
+      githubUrl: "https://github.com/abdulrahmanraziq/flight-booking",
+      url: "https://phenomenal-genie-c3b976.netlify.app/signin",
     },
   ];
 
@@ -98,7 +124,9 @@ function Portfolio() {
                 </li>
                 <li
                   onClick={() => setFilter("front-end-devlopment")}
-                  className={filter === "front-end-devlopment" ? "filter-active" : ""}
+                  className={
+                    filter === "front-end-devlopment" ? "filter-active" : ""
+                  }
                 >
                   Front End Development
                 </li>
@@ -124,18 +152,26 @@ function Portfolio() {
                       className="img-fluid"
                       alt={item.title}
                     />
-                    {/* <a
-                      href={item.img}
-                      data-lightbox="portfolio"
-                      data-title={item.title}
-                      className="link-preview"
-                      title="Preview"
-                    >
-                      <i className="fa fa-eye"></i>
-                    </a>
-                    <a href="#" className="link-details" title="More Details">
-                      <i className="fa fa-link"></i>
-                    </a> */}
+                    {item.isGitHub && item.isUrl && (
+                      <>
+                        <a
+                          href={item.githubUrl}
+                          data-lightbox="portfolio"
+                          data-title={item.title}
+                          className="link-preview"
+                          title="Preview"
+                        >
+                          <i className="fa fa-eye"></i>
+                        </a>
+                        <a
+                          href={item.url}
+                          className="link-details"
+                          title="More Details"
+                        >
+                          <i className="fa fa-link"></i>
+                        </a>
+                      </>
+                    )}
                     <a className="portfolio-title" href="#">
                       {item.title} <span>{item.category}</span>
                     </a>
